@@ -1,3 +1,4 @@
+import { SigninPage } from './../signin/signin';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthService } from './../../providers/auth-service';
 import { Component } from '@angular/core';
@@ -22,6 +23,16 @@ export class HomePage {
         authObserver.unsubscribe();
       }
     })
+  }
+  
+  public signOut() {
+    this.authService.signOut()
+      .then(() => {
+        this.navCtrl.parent.parent.setRoot(SigninPage);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
   
 }
