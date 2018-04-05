@@ -27,12 +27,11 @@ export class HomePage {
   
   public signOut() {
     this.authService.signOut()
-      .then(() => {
-        this.navCtrl.parent.parent.setRoot(SigninPage);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    .then(() => {
+      this.navCtrl.parent.parent.setRoot(SigninPage);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   }
-  
 }
