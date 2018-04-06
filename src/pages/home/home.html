@@ -1,13 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Resoluções
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
- <button ion-button block color="primary" (click)="signOut()">
-   Sair
- </button>
+  <ion-card>
+    <img src="{{ imgUrl }}" alt="{{ displayName}}">
+    <ion-card-content>
+      <ion-card-title>
+        Bem Vindo {{ displayName}}.
+      </ion-card-title>
+      
+      <p>testando essa treta</p>
+      
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <button ion-button block color="primary" (click)="signOut()">
+    Sair
+  </button>
 </ion-content>
