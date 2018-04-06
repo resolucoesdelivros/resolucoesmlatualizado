@@ -33,6 +33,7 @@ export class AuthService {
                     });
                 }
             }
+            
         }
         return this.signOutFirebase();
     }
