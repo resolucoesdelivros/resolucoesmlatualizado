@@ -12,7 +12,10 @@ export class HomePage {
   displayName: string;
   imgUrl: string;
   
-  constructor(public navCtrl: NavController,private authService: AuthService, private afAuth:AngularFireAuth) {
+  constructor(
+    public navCtrl: NavController,
+    private authService: AuthService, 
+    private afAuth:AngularFireAuth) {
     
     const authObserver = afAuth.authState.subscribe(user => {
       this.displayName = '';
@@ -24,7 +27,7 @@ export class HomePage {
       }
     })
   }
-  
+ 
   public signOut() {
     this.authService.signOut()
     .then(() => {

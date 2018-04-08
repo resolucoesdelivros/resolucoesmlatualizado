@@ -1,4 +1,40 @@
-<ion-header>
+<ion-content padding class="myview">
+  <img src="assets/imgs/glassess.png" class="logo" style="height:5em;margin-bottom:20%; margin-top:3em">
+
+  <form #form="ngForm" novalidate>
+
+    <ion-list>
+      <ion-item class="loginputs">
+        <ion-input placeholder="E-mail" type="text" name="email" [(ngModel)]="user.email" #email="ngModel" required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list style="margin-top:-1.5em">
+      <ion-item class="loginputs">
+        <ion-input placeholder="Senha" type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button block color="dark" style="margin-bottom:10%;font-size:0.8em" [disabled]="!form.form.valid" (click)="signIn()">
+      Entrar
+    </button>
+  </form>
+
+  <button style="font-size:0.8em" ion-button block color="dark" (click)="createAccount()">
+    Criar conta
+  </button>
+
+  <button style="font-size:0.8em" ion-button block icon-left color="dark" (click)="signInWithGoogle()">
+    <ion-icon name="logo-google"></ion-icon>
+    Logar com o Google
+  </button>
+
+  <button style="font-size:0.8em" ion-button block color="dark" (click)="resetPassword()">
+    Esqueci minha senha
+  </button>
+
+</ion-content>
+<!--<ion-header>
   <ion-navbar color="primary">
     <ion-title>
       Login
@@ -23,4 +59,4 @@
     Entrar com o Google
   </button>
   
-</ion-content>
+</ion-content>-->

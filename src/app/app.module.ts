@@ -14,6 +14,7 @@ import { ResetpasswordPage } from './../pages/resetpassword/resetpassword';
 import { SigninwithemailPage } from './../pages/signinwithemail/signinwithemail';
 import { SigninPage } from './../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
+import { ProfilePage } from '../pages/profile/profile';
 
 import { AuthService } from '../providers/auth-service';
 
@@ -35,7 +36,8 @@ const firebaseConfig = {
     ResetpasswordPage,
     SigninPage,
     SignupPage,
-    SigninwithemailPage
+    SigninwithemailPage,
+    ProfilePage
     
   ],
   imports: [
@@ -53,7 +55,8 @@ const firebaseConfig = {
     ResetpasswordPage,
     SigninPage,
     SignupPage,
-    SigninwithemailPage
+    SigninwithemailPage,
+    ProfilePage
     
   ],
   providers: [

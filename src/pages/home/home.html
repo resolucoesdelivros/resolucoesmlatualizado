@@ -1,4 +1,24 @@
 <ion-header>
+  <ion-navbar color="navbarColor">
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Resoluções</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="myview">
+
+
+  <button ion-button block color="dark" (click)="signOut()">
+    Sair
+  </button>
+
+</ion-content>
+
+<!--<ion-header>
   <ion-navbar>
     <ion-title>
       Resoluções
@@ -6,7 +26,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="myview">
   <ion-card>
     <img src="{{ imgUrl }}" alt="{{ displayName}}">
     <ion-card-content>
@@ -24,3 +44,4 @@
     Sair
   </button>
 </ion-content>
+-->
