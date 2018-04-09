@@ -4,16 +4,12 @@
             <ion-title>Menu</ion-title>
         </ion-toolbar>
     </ion-header>
+
+
     <ion-content>
         <ion-list>
-            <button ion-item (click)="openHomePage()">
-                Home
-            </button>
-            <button ion-item (click)="openPage()">
-                Perfil
-            </button>
-            <button ion-item menuClose>
-                Close Menu
+            <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+                {{p.title}}
             </button>
         </ion-list>
     </ion-content>
